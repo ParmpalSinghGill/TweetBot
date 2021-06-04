@@ -93,9 +93,6 @@ if __name__=="__main__":
 	tweets=[t[0].replace("\n","\\n")+"\n" for t in tweets]
 	with open("DataFiles/TWEETIT.txt","w") as f:
 		f.writelines(tweets)
-	# for t in tweets:
-	# 	print(t)
-	# print(getMixTweets())
 	# for i in range(200):
 	# 	print(getUrdaAda(i))
 	# print(ord("ਅ"))
