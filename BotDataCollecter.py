@@ -132,7 +132,7 @@ with open("TodayTag") as f:
 	hashtag=[d[:-1] for d in f.readlines() if len(d)>2][:]
 
 def Scraping():
-	bot=BOT(hashtag,user="",minn=1,maxx=10,base_file_path="Intelegent/DataFiles/")
+	bot=BOT(hashtag,user="USER",minn=1,maxx=10,base_file_path="Intelegent/DataFiles/")
 	# bot.RetweetFollower()
 	bot.saveTodaysTweet()
 
