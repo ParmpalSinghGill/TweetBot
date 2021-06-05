@@ -1,11 +1,11 @@
 import tweepy
 import time,datetime
-import os
+import os,sys
 from Secrets import getKey
 from tweepy.error import TweepError
 
 class BOT:
-	def __init__(self,hashtag,user="FARMER",minn=5,maxx=25,base_file_path="DataFiles/NewFiles/"):
+	def __init__(self,hashtag,user="USER",minn=5,maxx=25,base_file_path="DataFiles/NewFiles/"):
 		self.user=user
 		self.base_file_path=base_file_path
 		self.tweetnumber=1
@@ -132,7 +132,7 @@ with open("TodayTag") as f:
 	hashtag=[d[:-1] for d in f.readlines() if len(d)>2][:]
 
 def Scraping():
-	bot=BOT(hashtag,user="USER",minn=1,maxx=10,base_file_path="Intelegent/DataFiles/")
+	bot=BOT(hashtag,user=sys.argv[1],minn=1,maxx=10,base_file_path="Intelegent/DataFiles/")
 	# bot.RetweetFollower()
 	bot.saveTodaysTweet()
 
