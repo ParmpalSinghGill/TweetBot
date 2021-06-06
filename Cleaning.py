@@ -83,7 +83,6 @@ def removeExistedTweets(file,tweets):
 
 def process():
 	requiredword=None
-	requiredword="WhereIsRSS"
 	ProcessAllFiles("Data/pro/",cleantweets="Data/PROTweet.txt",cleanedData="Data/PROOut.csv",requireWord=requiredword)
 	ProcessAllFiles("Data/anti/",cleantweets="Data/AntiTweet.txt",cleanedData="Data/AntiOut.csv",requireWord=requiredword)
 

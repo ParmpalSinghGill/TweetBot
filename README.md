@@ -13,8 +13,33 @@ in file Secret.json
 You can add multiple accouts if want.
 #### 2. Data Collection
 second step is Data collection.
+Add hashtag for you want to collect data in file named TODAY
 Run the BotDataCollector by
 ```python BotDataCollector.py USER```
 User is same we set in json file
+Run it by adding pro and anti tweet tags
+
+#### 3. Data Processing
+In this place all protweetfiles in Data/pro directory and anti in Data/anti direcotry
+then run
+```python Cleaning.py```
+it will add Data/PROTweetProccessed.txt and Data/AntiTweetProcessed.txt files
+check it manualy and correct the tweets if found some wrong.
+
+#### 3. Train Netwok
+The Start Training by 
+```python NeuralNetwork.py```
+it will save the model.
+
+#### 4. Run Retweetbot.
+Now run the
+```python Retweet.py.py```
+it will data collection , classification and retweet the pro tweets only
+
+
+
+
+
+
 
 
